@@ -1,0 +1,6 @@
+body {
+    background-image: url(rainyDay.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
