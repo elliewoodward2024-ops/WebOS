@@ -1,24 +1,55 @@
 body {
-    background-image: url(../rainyDay.png);
+    background-image: url("../pac.jpeg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Times New Roman", Times, serif;
 }
 
-.ClockContainer {
-    border: solid 1px;
-    width: auto;
-    padding: 16px;
 
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: azure;
-    font-size: 19px;
+.ClockContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
 
+    padding: 12px 24px;
+
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgb(204, 202, 202);
+
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+
+.ClockContainer p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.os-title {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+#liveClock {
+    white-space: nowrap;
+    text-align: right;
 }
