@@ -1,5 +1,5 @@
 body {
-    background-image: url("../pac.jpeg");
+    background-image: url("../huh.png");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    padding: 12px 24px;
+    padding: 10px 24px;
 
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
@@ -54,7 +54,10 @@ body {
     text-align: right;
 }
 
+
+
 .window {
+    display: none;
     position: absolute;
     top: 150px;
     left: 100px;
@@ -63,8 +66,9 @@ body {
     min-height: 180px;
     border-radius: 13px;
 
-    border: 1px solid #555;
+    border: 1px solid #343232;
     background: #111;
+
     color: #eee;
 }
 
@@ -74,7 +78,7 @@ body {
     align-items: center;
     border-radius: 13px;
     padding: 10px;
-    background: #252525;
+    background: #111;
 
     cursor: grab;
     user-select: none;
@@ -85,10 +89,41 @@ body {
     font-size: 18px;
 }
 
+
+
 .window-header button {
     cursor: pointer;
+    background-color: rgb(34, 86, 135);
+    border-color: rgb(34, 86, 135);
+    color: #eee;
+    border-radius: 0px;
 }
 
 .window-content {
     padding: 15px;
+}
+
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 90px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    font: inherit;
+}
+
+.desktop-icon img {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+}
+
+.desktop-icon:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
 }

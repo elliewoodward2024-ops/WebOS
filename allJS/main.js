@@ -66,12 +66,38 @@ function dragElement(element) {
     }
 }
 
-const welcomeWindow = document.getElementById("welcome");
-
-dragElement(welcomeWindow);
-
-
-
 function closeWindow(element) {
     element.style.display = "none";
 }
+
+
+
+var biggestIndex = 1;
+
+function addWindowTapHandling(element) {
+    element.addEventListener("mousedown", () =>
+        handleWindowTap(element)
+    )
+}
+
+function handleWindowTap(element) {
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+}
+
+function openWindow(element) {
+    element.style.display = "block";
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+    element.style.top = "";
+    element.style.left = "";
+}
+
+window.onload = function () {
+    openWindow(document.getElementById("welcome"));
+};
+
+dragElement(document.getElementById("welcome"));
+dragElement(document.querySelector("#notes"))
+addWindowTapHandling(document.getElementById("welcome"));
+addWindowTapHandling(document.querySelector("#notes"));

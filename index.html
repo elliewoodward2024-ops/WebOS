@@ -16,11 +16,11 @@
         <div id="liveClock"></div>
     </header>
 
-    <main>
+    <main style="color: aliceblue;">
         <div id="welcome" class="window">
 
             <div id="welcomeheader" class="window-header">
-                <h1>Welcome</h1>
+                <h1>❤ Welcome Message ❤</h1>
 
                 <button type="button" onclick="closeWindow(document.getElementById('welcome'))" aria-label="Close welcome window">
                     x
@@ -28,10 +28,40 @@
             </div>
 
             <div class="window-content">
-                <p>Hello, welcome to Ellie's OS.</p>
+                <p>Hello, welcome to my OS! Enjoy and explore around the page.</p>
+            </div>
+        </div>
+
+
+
+        <div id="notes" class="window">
+
+            <div id="notesheader" class="window-header">
+                <h1>Notes App</h1>
+
+                <button type="button" onclick="closeWindow(document.getElementById('notes'))" aria-label="Close welcome window">
+                    x
+                </button>
             </div>
 
+            <div class="window-content">
+                <p>this is where I will make my notes app</p>
+            </div>
         </div>
+
+
+
+
+        <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
+            <button class="desktop-icon" onclick="openWindow(document.getElementById('welcome'))">
+                <p><span><img src="thing/7.png" style="width: 64px; height: 64px; border-radius: 16px;"></span><br>Home</p>
+            </button>
+            <button class="desktop-icon" onclick="openWindow(document.getElementById('notes'))">
+                <p><span><img src="thing/8.png" style="width: 64px; height: 64px; border-radius: 16px;"></span><br>Notes</p>
+            </button>
+
+        </div>
+
     </main>
 
 </body>
