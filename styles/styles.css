@@ -53,3 +53,42 @@ body {
     white-space: nowrap;
     text-align: right;
 }
+
+.window {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+
+    width: 350px;
+    min-height: 180px;
+    border-radius: 13px;
+
+    border: 1px solid #555;
+    background: #111;
+    color: #eee;
+}
+
+.window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 13px;
+    padding: 10px;
+    background: #252525;
+
+    cursor: grab;
+    user-select: none;
+}
+
+.window-header h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.window-header button {
+    cursor: pointer;
+}
+
+.window-content {
+    padding: 15px;
+}
