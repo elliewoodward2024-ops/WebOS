@@ -20,7 +20,7 @@
         <div id="welcome" class="window">
 
             <div id="welcomeheader" class="window-header">
-                <h1>❤ Welcome Message ❤</h1>
+                <h1> Welcome Message </h1>
 
                 <button type="button" onclick="closeWindow(document.getElementById('welcome'))" aria-label="Close welcome window">
                     x
@@ -28,13 +28,15 @@
             </div>
 
             <div class="window-content">
-                <p>Hello, welcome to my OS! Enjoy and explore around the page.</p>
+                <p>Hello, welcome to my webOS! Enjoy and explore around the page.</p>
+                <br>
+                
             </div>
         </div>
 
 
 
-        <div id="notes" class="window">
+        <div id="notes" class="window" style="max-width: 1000px; max-height: 600px;">
 
             <div id="notesheader" class="window-header">
                 <h1>Notes App</h1>
@@ -45,7 +47,60 @@
             </div>
 
             <div class="window-content">
-                <p>this is where I will make my notes app</p>
+                <input id="noteTitle"  placeholder="Note title...">
+                <textarea id="noteContent" placeholder="Write your note..."></textarea>
+                <br><br>
+                <button id="saveButton">Save Note</button>
+                <br><br>
+                <h2 style="font-size: 18px;">Saved Notes</h2>
+                <div id="notesList"></div>
+                
+            </div>
+        </div>
+
+
+
+        <div id="calc" class="window" style="max-width: 435px; max-height: 400px;">
+
+            <div id="calcheader" class="window-header">
+                <h1>Basic Calculator</h1>
+
+                <button type="button" onclick="closeWindow(document.getElementById('calc'))" aria-label="Close welcome window">
+                    x
+                </button>
+            </div>
+
+            <div class="window-content" >
+
+                <input id="calcInput" class="input2" type="text" readonly value="" placeholder="Calculating...">
+                <div class="calcButtons">
+                    <button class="clear" onclick="press('C')">C</button>
+                    <button onclick="press('&#40;')">&#40;</button>
+                    <button onclick="press('&#41;')">&#41;</button>
+                    <button class="operator" onclick="press('/')">/</button>
+                    
+                    <button onclick="press('7')">7</button>
+                    <button onclick="press('8')">8</button>
+                    <button onclick="press('9')">9</button>
+                    <button class="operator" onclick="press('*')">*</button>
+                    
+                    <button onclick="press('4')">4</button>
+                    <button onclick="press('5')">5</button>
+                    <button onclick="press('6')">6</button>
+                    <button  class="operator" onclick="press('-')">-</button>
+                    
+                    <button onclick="press('1')">1</button>
+                    <button onclick="press('2')">2</button>
+                    <button onclick="press('3')">3</button>
+                    <button class="operator" onclick="press('+')">+</button>
+                    
+                    <button onclick="press('0')">0</button>
+                    <button onclick="press('.')">.</button>
+                    <button onclick="press('-')">(-)</button>
+                    <button onclick="calc()">=</button>
+                </div>
+                
+            
             </div>
         </div>
 
@@ -54,10 +109,13 @@
 
         <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
             <button class="desktop-icon" onclick="openWindow(document.getElementById('welcome'))">
-                <p><span><img src="thing/7.png" style="width: 64px; height: 64px; border-radius: 16px;"></span><br>Home</p>
+                <p><span><img src="thing/home.png" ></span><br>Home</p>
             </button>
             <button class="desktop-icon" onclick="openWindow(document.getElementById('notes'))">
-                <p><span><img src="thing/8.png" style="width: 64px; height: 64px; border-radius: 16px;"></span><br>Notes</p>
+                <p><span><img src="thing/notes.png" ></span><br>Notes</p>
+            </button>
+            <button class="desktop-icon" onclick="openWindow(document.getElementById('calc'))">
+                <p><span><img src="thing/calculator.png" ></span><br>Basic Calculator</p>
             </button>
 
         </div>
