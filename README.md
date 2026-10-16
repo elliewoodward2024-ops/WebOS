@@ -6,7 +6,7 @@ Here is a webOS styled around a simple and clean rainy vibe.
 ### Demo Link 
 https://elliewoodward2024-ops.github.io/WebOS/
 
-### Features (at the moment): 
+### Features: 
 - Basic Calculator 
 - Notes app
 - Draggable windows
